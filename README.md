@@ -233,7 +233,7 @@ npx @modelcontextprotocol/inspector node dist/mcp/index.js
 
 ## Support
 
-- **Website**: https://lovie.ai
+- **Website**: https://lovie.co/
 - **npm**: https://www.npmjs.com/package/@lovie-ai/formation-mcp-server
 
 ## Legal Disclaimer
