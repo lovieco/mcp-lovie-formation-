@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getAllResources } from '../src/mcp/resources/index';
+import { getAllResources } from '../dist/mcp/resources/index';
 
 export default function handler(_req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');

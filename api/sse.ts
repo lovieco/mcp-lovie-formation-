@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getAllTools, handleToolCall } from '../src/mcp/tools/index';
-import { getAllResources, getResourceContent } from '../src/mcp/resources/index';
-import { getSessionStore } from '../src/mcp/state/FormationSessionStore';
+import { getAllTools, handleToolCall } from '../dist/mcp/tools/index';
+import { getAllResources, getResourceContent } from '../dist/mcp/resources/index';
+import { getSessionStore } from '../dist/mcp/state/FormationSessionStore';
 
 // SSE endpoint for MCP - supports both SSE (GET) and HTTP JSON-RPC (POST)
 // Note: Vercel serverless has limitations with long-lived SSE connections

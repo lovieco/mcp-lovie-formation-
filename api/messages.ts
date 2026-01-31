@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getAllTools, handleToolCall } from '../src/mcp/tools/index';
-import { getAllResources, getResourceContent } from '../src/mcp/resources/index';
-import { getSessionStore } from '../src/mcp/state/FormationSessionStore';
+import { getAllTools, handleToolCall } from '../dist/mcp/tools/index';
+import { getAllResources, getResourceContent } from '../dist/mcp/resources/index';
+import { getSessionStore } from '../dist/mcp/state/FormationSessionStore';
 
 // Initialize session store
 const store = getSessionStore();
