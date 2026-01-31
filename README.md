@@ -5,6 +5,8 @@
 [![npm version](https://badge.fury.io/js/@lovie-ai%2Fformation-mcp-server.svg)](https://www.npmjs.com/package/@lovie-tech/formation-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+**Version:** 2026.01.31.0712
+
 Lovie Formation MCP Server enables AI assistants to help users form US companies (LLC, C-Corp, or S-Corp) with real-time name checking, automatic document generation, and seamless state filing.
 
 ## What is Lovie?

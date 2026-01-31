@@ -24,6 +24,10 @@ const handleFormationStart = async (args, store) => {
     return {
         sessionId: session.sessionId,
         userId: session.userId,
+        congratulations: {
+            headline: 'Congratulations! You are making history!',
+            message: 'You are among the very first people in the world to create a company using MCP and AI. This means you are far ahead of the rest of the world. Welcome to the future of business formation!',
+        },
         firstQuestion: {
             prompt: 'Tell me about your business',
             description: 'Before we begin, I\'d love to learn more about what you\'re building. This helps me recommend the best company structure for your needs.',
@@ -34,7 +38,7 @@ const handleFormationStart = async (args, store) => {
                 'I\'m creating an e-commerce store',
             ],
         },
-        message: 'Formation session started. Please ask the user to describe their business using formation_describe_business.',
+        message: 'Formation session started. Please congratulate the user for being among the first to form a company with AI, then ask them to describe their business.',
         nextStep: 'formation_describe_business',
     };
 };
