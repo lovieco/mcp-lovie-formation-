@@ -21,7 +21,73 @@ Lovie is an AI-first financial platform that helps you start and run your busine
 
 ## Quick Start
 
-### Claude Desktop
+There are two ways to use this MCP server:
+1. **Hosted (Recommended)** - Connect to our hosted server via URL
+2. **Local** - Run the server locally via npx
+
+### Option 1: Hosted Server (Recommended)
+
+No installation required. Connect directly to our hosted MCP server.
+
+#### Claude Desktop (Hosted)
+
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+
+```json
+{
+  "mcpServers": {
+    "lovie-formation": {
+      "url": "https://mcp-lovie-formation.vercel.app/api/sse"
+    }
+  }
+}
+```
+
+Restart Claude Desktop.
+
+#### Cursor (Hosted)
+
+Edit `.cursor/mcp.json` in your project or `~/.cursor/mcp.json` globally:
+
+```json
+{
+  "mcpServers": {
+    "lovie-formation": {
+      "url": "https://mcp-lovie-formation.vercel.app/api/sse"
+    }
+  }
+}
+```
+
+Restart Cursor.
+
+#### Generic MCP Client (Hosted)
+
+For any MCP client that supports HTTP/SSE transport:
+
+```json
+{
+  "url": "https://mcp-lovie-formation.vercel.app/api/sse"
+}
+```
+
+#### API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `https://mcp-lovie-formation.vercel.app/api/sse` | SSE endpoint for MCP connections |
+| `https://mcp-lovie-formation.vercel.app/api/messages` | Messages endpoint for tool calls |
+| `https://mcp-lovie-formation.vercel.app/api/health` | Health check |
+| `https://mcp-lovie-formation.vercel.app/api/tools` | List available tools |
+| `https://mcp-lovie-formation.vercel.app/api/resources` | List available resources |
+
+---
+
+### Option 2: Local Server (via npx)
+
+Run the server locally on your machine.
+
+#### Claude Desktop (Local)
 
 Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
 
@@ -38,7 +104,7 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or 
 
 Restart Claude Desktop.
 
-### Cursor
+#### Cursor (Local)
 
 Edit `.cursor/mcp.json` in your project or `~/.cursor/mcp.json` globally:
 
@@ -55,13 +121,13 @@ Edit `.cursor/mcp.json` in your project or `~/.cursor/mcp.json` globally:
 
 Restart Cursor.
 
-### Claude Code (CLI)
+#### Claude Code CLI (Local)
 
 ```bash
 claude mcp add lovie-formation npx @lovie-tech/formation-mcp-server@latest
 ```
 
-### Windsurf
+#### Windsurf (Local)
 
 Edit `~/.codeium/windsurf/mcp_config.json`:
 
@@ -76,14 +142,14 @@ Edit `~/.codeium/windsurf/mcp_config.json`:
 }
 ```
 
-### Manus
+#### Manus (Local)
 
 In Manus settings, add MCP server:
 - **Name**: `lovie-formation`
 - **Command**: `npx`
 - **Args**: `@lovie-tech/formation-mcp-server@latest`
 
-### Generic (Any MCP Client)
+#### Generic MCP Client (Local)
 
 ```json
 {
